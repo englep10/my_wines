@@ -1,0 +1,13 @@
+<h1>Find a Stock by symbol</h1>
+
+ <form action="/wines" method="get">
+  <label>Search: <input name="search"></label>
+  <button>Submit</button>
+ </form>
+
+  <ul>
+  <% @results.each do |result| %>
+    <li><%= result['Name'] %></li>
+    <li><%= result['LastPrice'] %></li>
+  <% end %>
+ </ul>
